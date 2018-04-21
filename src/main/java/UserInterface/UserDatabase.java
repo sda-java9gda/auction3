@@ -15,5 +15,7 @@ public class UserDatabase {
         usersList.put(login,new UserPersonalData(login,password));
     }
 
-
+    public Map<String, UserPersonalData> getUsersList() {
+        return usersList;
+    }
 }
