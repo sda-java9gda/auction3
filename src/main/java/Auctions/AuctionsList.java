@@ -25,6 +25,15 @@ public class AuctionsList {
 
     public void removeProduct(){}
 
+    public void showAllAuctions(){
+        for (Product p:auctionsList
+             ) {
+
+            System.out.println(p);
+
+        }
+    }
+
     @Override
     public String toString() {
         return "AuctionsList{" +
