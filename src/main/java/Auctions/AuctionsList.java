@@ -23,7 +23,9 @@ public class AuctionsList {
         auctionsList.add(product);
     }
 
-    public void removeProduct(){}
+    public void removeProduct(String index){
+        auctionsList.remove(index);
+    }
 
     public void showAllAuctions(){
         for (Product p:auctionsList

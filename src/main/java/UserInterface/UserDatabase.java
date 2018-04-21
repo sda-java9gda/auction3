@@ -5,14 +5,24 @@ import java.util.Map;
 
 public class UserDatabase {
 
-    private Map <String, UserPersonalData> usersList = new HashMap<>();
+
+    private static UserDatabase Instance;
+    private Map<String, UserPersonalData> usersList = new HashMap<>();
 
     public UserDatabase() {
-        this.usersList = usersList;
     }
 
-    public void addUser (String login, String password){
-        usersList.put(login,new UserPersonalData(login,password));
+    public static UserDatabase getInstance() {
+        if (Instance == null){
+            Instance = new UserDatabase();
+        }
+        return Instance;
+    }
+
+
+
+    public void addUser(String login, String password) {
+        usersList.put(login, new UserPersonalData(login, password));
     }
 
     public Map<String, UserPersonalData> getUsersList() {
