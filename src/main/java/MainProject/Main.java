@@ -5,11 +5,12 @@ import Auctions.Product;
 import Controlers.LoginControler;
 import UserInterface.UserDatabase;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 
         State state = State.INIT;
@@ -48,7 +49,7 @@ public class Main {
                     break;
 
                 case REGISTRATION:
-                    System.out.println("PODAJ LOGIN DOREJESTRACJI");
+                    System.out.println("PODAJ LOGIN DO REJESTRACJI");
                     String login = scanner.nextLine();
                     System.out.println("PODAJ HASLO DO REJESTRACJI");
                     String password = scanner.nextLine();
