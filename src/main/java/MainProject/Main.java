@@ -5,11 +5,16 @@ import Auctions.Product;
 import Controlers.LoginControler;
 import UserInterface.UserDatabase;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+
+
+
 
         State state = State.INIT;
         Scanner scanner = new Scanner(System.in);
@@ -50,6 +55,7 @@ public class Main {
                     String login = scanner.nextLine();
                     System.out.println("PODAJ HASLO");
                     String password = scanner.nextLine();
+
                     userDatabase.addUser(login, password);
                     state = State.INIT;
                     break;
@@ -60,6 +66,7 @@ public class Main {
                     System.out.println("PODAJ HASLO");
                     String password = scanner.nextLine();
                     if (loginControler.isRegistered(login,password)){
+
                         state = State.LOGGED;
                     }else {
                         System.out.println("BLEDNY LOGIN LUB HASLO");

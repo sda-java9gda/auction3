@@ -5,6 +5,8 @@ import java.util.List;
 
 public class AuctionsList {
 
+    //String
+
 
    private List<Product> auctionsList = new ArrayList<>();
 
