@@ -101,7 +101,7 @@ public class Main {
 
                         case ("3"):
                             System.out.println("PODAJ INDES AUKCJI DO USUNIECIA");
-                            String index = scanner.nextLine();
+                            int index = scanner.nextInt();
                             auctionsList.removeProduct(index);
                             break;
 

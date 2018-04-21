@@ -22,8 +22,9 @@ public class AuctionsList {
         auctionsList.add(product);
     }
 
-    public void removeProduct(long product){
-        auctionsList.remove(auctionsList.get());
+    public void removeProduct(int index){
+
+        auctionsList.remove(auctionsList.get(getAuctionsList().));
     }
 
     public void showAllAuctions(){
