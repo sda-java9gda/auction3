@@ -1,5 +1,7 @@
 package MainProject;
 
+import UserInterface.UserDatabase;
+
 import java.util.Scanner;
 
 public class Main {
@@ -9,6 +11,7 @@ public class Main {
         State state = State.INIT;
         Scanner scanner = new Scanner(System.in);
 
+        UserDatabase userDatabase = new UserDatabase();
         while (state != State.EXIT) {
             switch (state) {
                 case INIT: {
@@ -44,13 +47,24 @@ public class Main {
                     String login = scanner.nextLine();
                     System.out.println("PODAJ HASLO");
                     String password = scanner.nextLine();
-
-
-
+                    userDatabase.addUser(login, password);
+                    state = State.INIT;
                     break;
                 }
                 case LOGGED: {
+                    System.out.println("PODAJ KOMENDE");
+                    System.out.println("1 - WYSWIETL AUKCJE");
+                    System.out.println("2 - DODAJ AUKCJE");
+                    System.out.println("3 - LICYTUJ");
+                    String answer = scanner.nextLine();
 
+                    switch (answer){
+                        case ("1"):{
+
+
+                            break;
+                        }
+                    }
                     break;
                 }
             }
