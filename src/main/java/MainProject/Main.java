@@ -88,7 +88,7 @@ public class Main {
                             System.out.println("PODAJ OPIS");
                             String opis = scanner.nextLine();
                             System.out.println("PODAJ CENE");
-                            double cena = scanner.nextDouble();
+                            int cena = scanner.nextInt();
                             auctionsList.addProduct(new Product(ID,nazwa,opis,cena));
                             break;
                         }

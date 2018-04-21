@@ -34,10 +34,5 @@ public class AuctionsList {
         }
     }
 
-    @Override
-    public String toString() {
-        return "AuctionsList{" +
-                "auctionsList=" + auctionsList +
-                '}';
-    }
+
 }

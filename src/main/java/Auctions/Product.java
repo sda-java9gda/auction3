@@ -5,7 +5,7 @@ public class Product {
     private long iDProduct;
     private String productName;
     private String productDescription;
-    private double productPrice;
+    private int productPrice;
 
     public long getiDProduct() {
         return iDProduct;
@@ -19,7 +19,7 @@ public class Product {
         return productDescription;
     }
 
-    public double getProductPrice() {
+    public int getProductPrice() {
         return productPrice;
     }
 
@@ -31,11 +31,11 @@ public class Product {
         this.productDescription = productDescription;
     }
 
-    public void setProductPrice(double productPrice) {
+    public void setProductPrice(int productPrice) {
         this.productPrice = productPrice;
     }
 
-    public Product(long iDProduct, String productName, String productDescription, double productPrice) {
+    public Product(long iDProduct, String productName, String productDescription, int productPrice) {
         this.iDProduct = iDProduct;
         this.productName = productName;
         this.productDescription = productDescription;
@@ -44,11 +44,9 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "iDProduct=" + iDProduct +
-                ", productName='" + productName + '\'' +
-                ", productDescription='" + productDescription + '\'' +
-                ", productPrice=" + productPrice +
-                '}';
+        return iDProduct + " - " + productName + " - " +
+                productDescription + " - " +
+                 productPrice ;
+
     }
 }
