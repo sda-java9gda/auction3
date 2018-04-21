@@ -31,7 +31,7 @@ public class Main {
                             break;
 
                         case ("2"):
-                            state = State.LOGGED;
+                            state = State.LOGGING;
                             break;
 
                         case ("0"):
@@ -46,9 +46,9 @@ public class Main {
                     break;
                 }
                 case REGISTRATION: {
-                    System.out.println("PODAJ LOGIN");
+                    System.out.println("PODAJ LOGIN DOREJESTRACJI");
                     String login = scanner.nextLine();
-                    System.out.println("PODAJ HASLO");
+                    System.out.println("PODAJ HASLO DO REJESTRACJI");
                     String password = scanner.nextLine();
                     userDatabase.addUser(login, password);
                     state = State.INIT;
@@ -82,6 +82,7 @@ public class Main {
                         case ("2"): {
                             System.out.println("PODAJ NUMER OFERTY");
                             long ID = scanner.nextLong();
+                            scanner.nextLine();
                             System.out.println("PODAJ NAZWE");
                             String nazwa = scanner.nextLine();
                             System.out.println("PODAJ OPIS");
