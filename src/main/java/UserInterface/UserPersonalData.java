@@ -3,13 +3,13 @@ package UserInterface;
 public class UserPersonalData {
 
 
-        private String loginName;
-        private String password;
-        private String firstName;
-        private String lastName;
-        private String email;
-        private String deliveryAddress;
-        private String homeAddress;
+    private String loginName;
+    private String password;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String deliveryAddress;
+    private String homeAddress;
 
     public String getPassword() {
         return password;
@@ -89,5 +89,21 @@ public class UserPersonalData {
                 ", deliveryAddress='" + deliveryAddress + '\'' +
                 ", homeAddress='" + homeAddress + '\'' +
                 '}';
+    }
+
+    public boolean equals(Object o) {
+        if(! (o instanceof UserPersonalData)) {
+            return false;
+        }
+
+        if(this == o) {
+            return true;
+        }
+
+        if(this.getLoginName().equals(((UserPersonalData) o).getLoginName()) && this.getPassword().equals(((UserPersonalData) o).getPassword())) {
+            return true;
+        }
+
+        return false;
     }
 }
