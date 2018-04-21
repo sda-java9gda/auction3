@@ -19,12 +19,11 @@ public class AuctionsList {
     }
 
     public void addProduct(Product product){
-
         auctionsList.add(product);
     }
 
-    public void removeProduct(String index){
-        auctionsList.remove(index);
+    public void removeProduct(long product){
+        auctionsList.remove(auctionsList.get());
     }
 
     public void showAllAuctions(){

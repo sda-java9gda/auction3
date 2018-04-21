@@ -96,7 +96,6 @@ public class Main {
                             System.out.println("PODAJ CENE");
                             int cena = scanner.nextInt();
                             auctionsList.addProduct(new Product(ID, nazwa, opis, cena));
-                            state = State.LOGGED;
                             break;
 
                         case ("3"):
