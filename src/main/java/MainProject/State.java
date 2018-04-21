@@ -2,6 +2,6 @@ package MainProject;
 
 public enum State {
 
-    INIT, REGISTRATION, LOGGED, EXIT;
+    INIT, REGISTRATION, LOGGING, LOGGED, EXIT;
 
 }

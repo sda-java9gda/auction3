@@ -1,5 +1,6 @@
 package MainProject;
 
+import Controlers.LoginControler;
 import UserInterface.UserDatabase;
 
 import java.util.Scanner;
@@ -12,6 +13,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         UserDatabase userDatabase = new UserDatabase();
+        LoginControler loginControler = new LoginControler();
         while (state != State.EXIT) {
             switch (state) {
                 case INIT: {
@@ -19,9 +21,7 @@ public class Main {
                     System.out.println("1 - ZAREJESTRUJ SIE");
                     System.out.println("2 - ZALOGUJ SIE");
                     System.out.println("0 - WYJSCIE");
-
                     String answer = scanner.nextLine();
-
                     switch (answer) {
                         case ("1"):
                             state = State.REGISTRATION;
@@ -51,6 +51,21 @@ public class Main {
                     state = State.INIT;
                     break;
                 }
+                case LOGGING: {
+                    System.out.println("PODAJ LOGIN");
+                    String login = scanner.nextLine();
+                    System.out.println("PODAJ HASLO");
+                    String password = scanner.nextLine();
+
+                    if (loginControler.isRegistered(login,password)){
+                        state = State.LOGGED;
+                    }else {
+                        System.out.println("BLEDNY LOGIN LUB HASLO");
+                        state = State.LOGGING;
+                    }
+
+
+                }
                 case LOGGED: {
                     System.out.println("PODAJ KOMENDE");
                     System.out.println("1 - WYSWIETL AUKCJE");
@@ -58,18 +73,30 @@ public class Main {
                     System.out.println("3 - LICYTUJ");
                     String answer = scanner.nextLine();
 
-                    switch (answer){
-                        case ("1"):{
+                    switch (answer) {
+                        case ("1"): {
 
 
                             break;
+                        }
+                        case ("2"): {
+
+                            break;
+                        }
+                        case ("3"): {
+
+                            break;
+                        }
+                        default: {
+                            System.out.println("ZLA KOMENDA");
+                            state = State.LOGGED;
                         }
                     }
                     break;
                 }
             }
         }
-
+        scanner.close();
 
     }
 }
