@@ -34,7 +34,6 @@ public class UserDatabase {
         FileWriter fileWriter = new FileWriter(fileName);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-
         bufferedWriter.write(String.valueOf(usersList.get(login)));
         bufferedWriter.newLine();
         bufferedWriter.close();
