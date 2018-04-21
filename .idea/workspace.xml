@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5e164de7-1658-46cb-af88-54e8ce6bd43c" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface/UserRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface/UserRegistry.java" afterDir="false" />
@@ -10,6 +11,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 >>>>>>> 6e18005a8160f24765a4932f09452d93bef45a50
+=======
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/UserInterface/UserDatabase.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainProject/Main.java" afterPath="$PROJECT_DIR$/src/main/java/MainProject/Main.java" />
+>>>>>>> bf1b90374c405dfb3d004bbef3e4f33dc2e0b114
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,6 +42,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/MainProject/Main.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="136">
               <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
 =======
@@ -43,6 +50,13 @@
               <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
               <folding />
 >>>>>>> 6e18005a8160f24765a4932f09452d93bef45a50
+=======
+            <state relative-caret-position="411">
+              <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> bf1b90374c405dfb3d004bbef3e4f33dc2e0b114
             </state>
           </provider>
         </entry>
@@ -69,9 +83,27 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="UserData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/UserInterface/UserData.java">
 =======
+=======
+      <file leaf-file-name="UserDatabase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/UserInterface/UserDatabase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#243#244#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> bf1b90374c405dfb3d004bbef3e4f33dc2e0b114
       <file leaf-file-name="UserRegistry.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/UserInterface/UserRegistry.java">
 >>>>>>> 6e18005a8160f24765a4932f09452d93bef45a50
@@ -110,6 +142,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/UserInterface/UserRegistry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/UserInterface/UserDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MainProject/Main.java" />
       </list>
     </option>
   </component>
@@ -402,6 +436,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MainProject/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UserInterface/UserPersonalData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -422,20 +464,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MainProject/State.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/UserInterface/UserDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#243#244#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MainProject/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-34">
           <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
           <folding />
 >>>>>>> 6e18005a8160f24765a4932f09452d93bef45a50
+=======
+        <state relative-caret-position="411">
+          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> bf1b90374c405dfb3d004bbef3e4f33dc2e0b114
         </state>
       </provider>
     </entry>
