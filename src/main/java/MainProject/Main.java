@@ -54,7 +54,7 @@ public class Main {
                     System.out.println("PODAJ HASLO DO REJESTRACJI");
                     String password = scanner.nextLine();
                     userDatabase.addUser(login, password);
-                    System.out.println("GRATULACJE, JEST ZAREJESTROWANY");
+                    System.out.println("GRATULACJE, JESTES ZAREJESTROWANY");
                     state = State.INIT;
                     break;
 
@@ -84,6 +84,7 @@ public class Main {
                     switch (answer2) {
                         case ("1"):
                             auctionsList.showAllAuctions();
+                            System.out.println();
                             break;
 
                         case ("2"):
@@ -97,10 +98,11 @@ public class Main {
                             System.out.println("PODAJ CENE");
                             int cena = scanner.nextInt();
                             auctionsList.addProduct(new Product(ID, nazwa, opis, cena));
+                            scanner.nextLine();
                             break;
 
                         case ("3"):
-                            System.out.println("PODAJ INDES AUKCJI DO USUNIECIA");
+                            System.out.println("PODAJ INDEKS AUKCJI DO USUNIECIA");
                             int index = scanner.nextInt();
                             auctionsList.removeProduct(index);
                             break;
@@ -111,7 +113,6 @@ public class Main {
 
                         default: {
                             System.out.println("ZLA KOMENDA");
-                            state = State.LOGGED;
                             break;
                         }
                     }
