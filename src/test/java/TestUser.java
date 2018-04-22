@@ -1,8 +1,7 @@
-import UserInterface.UserDatabase;
-import UserInterface.UserPersonalData;
+import Dataworkspace.UserDatabase;
+import Dataworkspace.UserPersonalData;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.mockito.Mockito.verify;
