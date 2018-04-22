@@ -16,7 +16,7 @@ public class TestUser {
     }
 
     @Test
-    public void addUserAddsLoginAsAKey() {
+    public void addUserAddsLoginAsAKey() throws Exception {
         String login = "a";
         String password = "b";
 
@@ -26,7 +26,7 @@ public class TestUser {
 
     }
     @Test
-    public void userAddedCorrectlyTest(){
+    public void userAddedCorrectlyTest() throws Exception{
         String login = "a";
         String password = "b";
 //        jcjianjcoasn
