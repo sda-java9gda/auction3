@@ -75,7 +75,7 @@ public class Main {
                     System.out.println("PODAJ KOMENDE");
                     System.out.println("1 - WYSWIETL AUKCJE");
                     System.out.println("2 - DODAJ AUKCJE");
-                    System.out.println("3 - USUN AUKCJE");
+                    System.out.println("3 - LICYTUJ AUKCJE");
                     System.out.println("4 - WYJSCIE");
                     String answer2 = scanner.nextLine();
                     switch (answer2) {
@@ -97,9 +97,11 @@ public class Main {
                             scanner.nextLine();
                             break;
                         case ("3"):
-                            System.out.println("PODAJ INDEKS AUKCJI DO USUNIECIA");
-                            int index = scanner.nextInt();
-                            auctionsList.removeProduct(index);
+                            System.out.println("PODAJ INDEKS AUKCJI DO LICYTOWANIA");
+                            long index = scanner.nextInt();
+                            System.out.println("PODAJ NOWA CENE");
+                            int nowaCena = scanner.nextInt();
+                            auctionController.bidAuction(index,nowaCena);
                             break;
                         case ("4"):
                             state = State.INIT;
