@@ -19,7 +19,7 @@ public class AuctionsList {
         return Instance;
     }
 
-    String fileName;
+    String fileName = "Baza_Aukcji.txt";
     File auctionListFile = new File(fileName);
 
     public List<Auction> getAuctionsList() {
@@ -31,30 +31,39 @@ public class AuctionsList {
     }
 
     public void addProduct(Auction auction) throws IOException {
-
-
         auctionsList.add(auction);
-
-        FileWriter fileWriter = new FileWriter(auctionListFile);
+        FileWriter fileWriter = new FileWriter(auctionListFile,true);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
         bufferedWriter.write(auction.toString());
         bufferedWriter.newLine();
         bufferedWriter.close();
     }
 
-    public void removeProduct(int index) {
-
-
+    public void removeAuction(long index) {
+        for (Auction a: auctionsList){
+            if (a.getiDProduct() == index) {
+                auctionsList.remove(a);
+            }
+        }
     }
 
     public void showAllAuctions() {
         for (Auction p : auctionsList
                 ) {
-
             System.out.println(p);
-
         }
     }
+
+    public Auction getAuction (long index){
+        for (Auction a: auctionsList){
+          if (a.getiDProduct() == index) {
+              return a;
+          }
+        }
+        return null;
+    }
+
+
 
 
 }

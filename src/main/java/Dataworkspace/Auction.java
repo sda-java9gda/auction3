@@ -7,6 +7,15 @@ public class Auction {
     private String productDescription;
     private int productPrice;
 
+    private static Auction Instance;
+
+    public static Auction getInstance() {
+        if (Instance == null){
+            Instance = new Auction();
+        }
+        return Instance;
+    }
+
     public long getiDProduct() {
         return iDProduct;
     }
@@ -41,6 +50,12 @@ public class Auction {
         this.productDescription = productDescription;
         this.productPrice = productPrice;
     }
+
+    public Auction() {
+    }
+
+
+
 
     @Override
     public String toString() {
