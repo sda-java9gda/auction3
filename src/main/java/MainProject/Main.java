@@ -1,8 +1,8 @@
 package MainProject;
 
 import Dataworkspace.AuctionsList;
-import Dataworkspace.Product;
-import Controllers.LoginController;
+import Dataworkspace.Auction;
+import Controllers.RegistrationController;
 import Dataworkspace.UserDatabase;
 
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         UserDatabase userDatabase = UserDatabase.getInstance();
-        LoginController loginController = new LoginController();
+        RegistrationController registrationController = new RegistrationController();
         AuctionsList auctionsList = new AuctionsList();
         while (state != State.EXIT) {
             switch (state) {
@@ -31,15 +31,12 @@ public class Main {
                         case ("1"):
                             state = State.REGISTRATION;
                             break;
-
                         case ("2"):
                             state = State.LOGGING;
                             break;
-
                         case ("0"):
                             state = State.EXIT;
                             break;
-
                         default: {
                             System.out.println("ZLA ODPOWIEDZ");
                             state = State.INIT;
@@ -47,23 +44,24 @@ public class Main {
                         }
                     }
                     break;
-
                 case REGISTRATION:
                     System.out.println("PODAJ LOGIN DO REJESTRACJI");
                     String login = scanner.nextLine();
                     System.out.println("PODAJ HASLO DO REJESTRACJI");
                     String password = scanner.nextLine();
-                    userDatabase.addUser(login, password);
-                    System.out.println("GRATULACJE, JESTES ZAREJESTROWANY");
+                    if (!registrationController.addUser(login, password)) {
+                        System.out.println("NIE UDALO SIE ZAREJESTROWAC");
+                    } else {
+                        System.out.println("GRATULACJE, JESTES ZAREJESTROWANY");
+                    }
                     state = State.INIT;
                     break;
-
                 case LOGGING:
                     System.out.println("PODAJ LOGIN");
                     String login2 = scanner.nextLine();
                     System.out.println("PODAJ HASLO");
                     String password2 = scanner.nextLine();
-                    if (loginController.isRegistered(login2, password2)==true) {
+                    if (registrationController.isRegistered(login2, password2)) {
                         System.out.println("ZALOGOWALES SIE " + login2);
                         state = State.LOGGED;
                         break;
@@ -72,7 +70,6 @@ public class Main {
                         state = State.INIT;
                         break;
                     }
-
                 case LOGGED:
                     System.out.println("PODAJ KOMENDE");
                     System.out.println("1 - WYSWIETL AUKCJE");
@@ -80,13 +77,11 @@ public class Main {
                     System.out.println("3 - USUN AUKCJE");
                     System.out.println("4 - WYJSCIE");
                     String answer2 = scanner.nextLine();
-
                     switch (answer2) {
                         case ("1"):
                             auctionsList.showAllAuctions();
                             System.out.println();
                             break;
-
                         case ("2"):
                             System.out.println("PODAJ NUMER OFERTY");
                             long ID = scanner.nextLong();
@@ -97,27 +92,23 @@ public class Main {
                             String opis = scanner.nextLine();
                             System.out.println("PODAJ CENE");
                             int cena = scanner.nextInt();
-                            auctionsList.addProduct(new Product(ID, nazwa, opis, cena));
+                            auctionsList.addProduct(new Auction(ID, nazwa, opis, cena));
                             scanner.nextLine();
                             break;
-
                         case ("3"):
                             System.out.println("PODAJ INDEKS AUKCJI DO USUNIECIA");
                             int index = scanner.nextInt();
                             auctionsList.removeProduct(index);
                             break;
-
                         case ("4"):
                             state = State.INIT;
                             break;
-
                         default: {
                             System.out.println("ZLA KOMENDA");
                             break;
                         }
                     }
                     break;
-
             }
         }
         scanner.close();

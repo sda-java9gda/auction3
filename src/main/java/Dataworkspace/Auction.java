@@ -1,6 +1,6 @@
 package Dataworkspace;
 
-public class Product {
+public class Auction {
 
     private long iDProduct;
     private String productName;
@@ -35,7 +35,7 @@ public class Product {
         this.productPrice = productPrice;
     }
 
-    public Product(long iDProduct, String productName, String productDescription, int productPrice) {
+    public Auction(long iDProduct, String productName, String productDescription, int productPrice) {
         this.iDProduct = iDProduct;
         this.productName = productName;
         this.productDescription = productDescription;

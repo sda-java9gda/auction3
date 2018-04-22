@@ -9,13 +9,20 @@ import java.util.List;
 
 public class AuctionsList {
 
+    private static AuctionsList Instance;
+    private List<Auction> auctionsList = new ArrayList<>();
 
-   private List<Product> auctionsList = new ArrayList<>();
+    public static AuctionsList getInstance() {
+        if (Instance == null){
+            Instance = new AuctionsList();
+        }
+        return Instance;
+    }
 
-   String fileName = "Baza aukcji.txt";
-   File auctionListFile = new File(fileName);
+    String fileName = "Baza aukcji.txt";
+    File auctionListFile = new File(fileName);
 
-    public List<Product> getAuctionsList() {
+    public List<Auction> getAuctionsList() {
         return auctionsList;
     }
 
@@ -23,26 +30,26 @@ public class AuctionsList {
         this.auctionsList = auctionsList;
     }
 
-    public void addProduct(Product product) throws IOException {
+    public void addProduct(Auction auction) throws IOException {
 
 
-        auctionsList.add(product);
+        auctionsList.add(auction);
 
         FileWriter fileWriter = new FileWriter(auctionListFile);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-        bufferedWriter.write(product.toString());
+        bufferedWriter.write(auction.toString());
         bufferedWriter.newLine();
         bufferedWriter.close();
     }
 
-    public void removeProduct(int index){
+    public void removeProduct(int index) {
 
 
     }
 
-    public void showAllAuctions(){
-        for (Product p:auctionsList
-             ) {
+    public void showAllAuctions() {
+        for (Auction p : auctionsList
+                ) {
 
             System.out.println(p);
 
