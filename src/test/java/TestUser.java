@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
+import java.io.IOException;
+
 import static junit.framework.TestCase.assertTrue;
 import static org.mockito.Mockito.verify;
 
@@ -16,7 +18,7 @@ public class TestUser {
     }
 
     @Test
-    public void addUserAddsLoginAsAKey() {
+    public void addUserAddsLoginAsAKey() throws IOException {
         String login = "a";
         String password = "b";
 
@@ -26,7 +28,7 @@ public class TestUser {
 
     }
     @Test
-    public void userAddedCorrectlyTest(){
+    public void userAddedCorrectlyTest() throws IOException {
         String login = "a";
         String password = "b";
 //        jcjianjcoasn
