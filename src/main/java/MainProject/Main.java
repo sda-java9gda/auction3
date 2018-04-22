@@ -1,5 +1,6 @@
 package MainProject;
 
+import Controllers.AuctionController;
 import Dataworkspace.AuctionsList;
 import Dataworkspace.Auction;
 import Controllers.RegistrationController;
@@ -16,7 +17,7 @@ public class Main {
         State state = State.INIT;
         Scanner scanner = new Scanner(System.in);
 
-        UserDatabase userDatabase = UserDatabase.getInstance();
+        AuctionController auctionController = new AuctionController();
         RegistrationController registrationController = new RegistrationController();
         AuctionsList auctionsList = new AuctionsList();
         while (state != State.EXIT) {
@@ -79,7 +80,7 @@ public class Main {
                     String answer2 = scanner.nextLine();
                     switch (answer2) {
                         case ("1"):
-                            auctionsList.showAllAuctions();
+                            auctionController.showAllAuctions();
                             System.out.println();
                             break;
                         case ("2"):
@@ -92,7 +93,7 @@ public class Main {
                             String opis = scanner.nextLine();
                             System.out.println("PODAJ CENE");
                             int cena = scanner.nextInt();
-                            auctionsList.addProduct(new Auction(ID, nazwa, opis, cena));
+                            auctionController.addAuction(new Auction(ID, nazwa, opis, cena));
                             scanner.nextLine();
                             break;
                         case ("3"):
