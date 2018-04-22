@@ -3,20 +3,27 @@ import Dataworkspace.AuctionsList;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class TestAuction {
-private AuctionsList auctionsList;
-private Auction auction;
-@Before
-    public void setUp (){
-    auctionsList = new AuctionsList();
-    auction =new Auction(124,"maslo","maslo maslane",10);
-}
+    private AuctionsList auctionsList;
+    private Auction auction;
 
-@Test
-    public void testAddedAuctions (){
+    @Before
+    public void setUp() {
+        auctionsList = new AuctionsList();
 
+    }
 
-//    auctionsList.addProduct();
-}
+    @Test
+    public void testAddedAuctions() throws IOException {
+        long idProduct = 124;
+        String productName = "maslo";
+        String productDescription = "maslane";
+        int productPrice = 10;
+
+        auctionsList.addProduct(new Auction(idProduct, productName, productDescription, productPrice));
+
+    }
 
 }
