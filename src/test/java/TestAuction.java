@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import java.io.IOException;
 
+import static junit.framework.TestCase.assertTrue;
+
 public class TestAuction {
     private AuctionsList auctionsList;
     private Auction auction;
@@ -22,8 +24,8 @@ public class TestAuction {
         String productDescription = "maslane";
         int productPrice = 10;
 
-        auctionsList.addProduct(new Auction(idProduct, productName, productDescription, productPrice));
-
+        auctionsList.addProduct(new Auction(idProduct));
+assertTrue(auctionsList.getAuctionsList().contains(new Auction(idProduct)));
     }
 
 }
