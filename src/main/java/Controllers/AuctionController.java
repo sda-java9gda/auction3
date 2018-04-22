@@ -34,7 +34,7 @@ public class AuctionController {
             if (licznik >2){
                 System.out.println("KUPILES PRZEDMIOT " + auctionsList.getAuction(index));
                 auctionsList.removeAuction(index);
-                
+
             }
             return true;
         } catch (Exception e) {

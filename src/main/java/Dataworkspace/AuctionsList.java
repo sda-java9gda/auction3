@@ -19,7 +19,7 @@ public class AuctionsList {
         return Instance;
     }
 
-    String fileName;
+    String fileName = "Baza_Aukcji.txt";
     File auctionListFile = new File(fileName);
 
     public List<Auction> getAuctionsList() {

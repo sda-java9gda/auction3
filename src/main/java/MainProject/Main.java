@@ -102,6 +102,7 @@ public class Main {
                             System.out.println("PODAJ NOWA CENE");
                             int nowaCena = scanner.nextInt();
                             auctionController.bidAuction(index,nowaCena);
+                            scanner.nextLine();
                             break;
                         case ("4"):
                             state = State.INIT;
