@@ -32,6 +32,7 @@ public class AuctionsList {
 
     public void addProduct(Auction auction) throws IOException {
         auctionsList.add(auction);
+
         FileWriter fileWriter = new FileWriter(auctionListFile, true);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
         bufferedWriter.write(auction.toString());

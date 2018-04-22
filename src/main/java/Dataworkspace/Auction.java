@@ -23,6 +23,10 @@ public class Auction {
         return iDProduct;
     }
 
+    public void setiDProduct(long iDProduct) {
+        this.iDProduct = iDProduct;
+    }
+
     public String getProductName() {
         return productName;
     }
@@ -47,8 +51,7 @@ public class Auction {
         this.productPrice = productPrice;
     }
 
-    public Auction(long iDProduct, String productName, String productDescription, int productPrice) {
-        this.iDProduct = iDProduct;
+    public Auction(String productName, String productDescription, int productPrice) {
         this.productName = productName;
         this.productDescription = productDescription;
         this.productPrice = productPrice;

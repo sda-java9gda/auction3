@@ -9,10 +9,11 @@ public class AuctionController {
 
     private AuctionsList auctionsList = AuctionsList.getInstance();
 
+    long iDSetUp = 1000;
     public boolean addAuction(Auction auction) {
         try {
             auctionsList.addProduct(auction);
-            
+            auction.setiDProduct(++iDSetUp);
             return true;
         } catch (IOException e) {
             return false;
