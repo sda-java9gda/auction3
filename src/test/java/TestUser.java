@@ -17,11 +17,9 @@ public class TestUser {
     }
 
     @Test
-<<<<<<< HEAD
-    public void addUserAddsLoginAsAKey() throws IOException {
-=======
+
     public void addUserAddsLoginAsAKey() throws Exception {
->>>>>>> 7cd717399809d4bd528ae8d7760fe18c8d78899d
+
         String login = "a";
         String password = "b";
 
@@ -31,11 +29,7 @@ public class TestUser {
 
     }
     @Test
-<<<<<<< HEAD
-    public void userAddedCorrectlyTest() throws IOException {
-=======
     public void userAddedCorrectlyTest() throws Exception{
->>>>>>> 7cd717399809d4bd528ae8d7760fe18c8d78899d
         String login = "a";
         String password = "b";
 //        jcjianjcoasn
