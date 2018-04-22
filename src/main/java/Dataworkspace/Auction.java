@@ -70,4 +70,20 @@ public class Auction {
                  productPrice ;
 
     }
+
+    public boolean equals(Object o) {
+        if(! (o instanceof Auction)) {
+            return false;
+        }
+
+        if(this == o) {
+            return true;
+        }
+
+        if(this.getiDProduct() == ((Auction) o).getiDProduct() ) {
+            return true;
+        }
+
+        return false;
+    }
 }
