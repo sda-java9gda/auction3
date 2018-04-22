@@ -1,9 +1,9 @@
 package MainProject;
 
-import Auctions.AuctionsList;
-import Auctions.Product;
+import Dataworkspace.AuctionsList;
+import Dataworkspace.Product;
 import Controllers.LoginController;
-import UserInterface.UserDatabase;
+import Dataworkspace.UserDatabase;
 
 import java.io.IOException;
 import java.util.Scanner;

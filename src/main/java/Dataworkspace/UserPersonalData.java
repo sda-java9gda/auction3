@@ -1,4 +1,4 @@
-package UserInterface;
+package Dataworkspace;
 
 public class UserPersonalData {
 
