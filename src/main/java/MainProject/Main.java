@@ -20,6 +20,7 @@ public class Main {
         AuctionController auctionController = new AuctionController();
         RegistrationController registrationController = new RegistrationController();
         AuctionsList auctionsList = new AuctionsList();
+        long iD = 100;
         while (state != State.EXIT) {
             switch (state) {
                 case INIT:

@@ -12,6 +12,7 @@ public class AuctionController {
     public boolean addAuction(Auction auction) {
         try {
             auctionsList.addProduct(auction);
+            
             return true;
         } catch (IOException e) {
             return false;
@@ -19,10 +20,11 @@ public class AuctionController {
     }
 
     public void showAllAuctions() {
-        for (Auction a : auctionsList.getAuctionsList()) {
-            System.out.println(a);
-        }
+        auctionsList.showAllAuctions();
     }
+
+
+
 
 
     int licznik = 0;
