@@ -1,4 +1,4 @@
-package Auctions;
+package Dataworkspace;
 
 public class Product {
 

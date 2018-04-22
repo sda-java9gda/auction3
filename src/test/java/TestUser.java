@@ -1,8 +1,9 @@
-import UserInterface.UserDatabase;
-import UserInterface.UserPersonalData;
+import Dataworkspace.UserDatabase;
+import Dataworkspace.UserPersonalData;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
+
+import java.io.IOException;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.mockito.Mockito.verify;
@@ -16,7 +17,9 @@ public class TestUser {
     }
 
     @Test
+
     public void addUserAddsLoginAsAKey() throws Exception {
+
         String login = "a";
         String password = "b";
 
