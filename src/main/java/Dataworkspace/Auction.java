@@ -9,6 +9,9 @@ public class Auction {
 
     private static Auction Instance;
 
+    public Auction(long idProduct) {
+    }
+
     public static Auction getInstance() {
         if (Instance == null){
             Instance = new Auction();
