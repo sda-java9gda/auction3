@@ -25,7 +25,7 @@ public class TestAuction {
         int productPrice = 10;
 
         auctionsList.addProduct(new Auction(idProduct));
-assertTrue(auctionsList.getAuctionsList().contains(new Auction(idProduct)));
+        assertTrue(auctionsList.getAuctionsList().contains(new Auction(idProduct)));
     }
 
 }
