@@ -13,7 +13,7 @@ public class AuctionsList {
     private List<Auction> auctionsList = new ArrayList<>();
 
     public static AuctionsList getInstance() {
-        if (Instance == null){
+        if (Instance == null) {
             Instance = new AuctionsList();
         }
         return Instance;
@@ -32,7 +32,8 @@ public class AuctionsList {
 
     public void addProduct(Auction auction) throws IOException {
         auctionsList.add(auction);
-        FileWriter fileWriter = new FileWriter(auctionListFile,true);
+
+        FileWriter fileWriter = new FileWriter(auctionListFile, true);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
         bufferedWriter.write(auction.toString());
         bufferedWriter.newLine();
@@ -40,7 +41,7 @@ public class AuctionsList {
     }
 
     public void removeAuction(long index) {
-        for (Auction a: auctionsList){
+        for (Auction a : auctionsList) {
             if (a.getiDProduct() == index) {
                 auctionsList.remove(a);
             }
@@ -48,22 +49,19 @@ public class AuctionsList {
     }
 
     public void showAllAuctions() {
-        for (Auction p : auctionsList
-                ) {
+        for (Auction p : auctionsList) {
             System.out.println(p);
         }
     }
 
-    public Auction getAuction (long index){
-        for (Auction a: auctionsList){
-          if (a.getiDProduct() == index) {
-              return a;
-          }
+    public Auction getAuction(long index) {
+        for (Auction a : auctionsList) {
+            if (a.getiDProduct() == index) {
+                return a;
+            }
         }
         return null;
     }
-
-
 
 
 }

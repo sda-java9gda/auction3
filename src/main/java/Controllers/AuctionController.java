@@ -9,9 +9,11 @@ public class AuctionController {
 
     private AuctionsList auctionsList = AuctionsList.getInstance();
 
+    long iDSetUp = 1000;
     public boolean addAuction(Auction auction) {
         try {
             auctionsList.addProduct(auction);
+            auction.setiDProduct(++iDSetUp);
             return true;
         } catch (IOException e) {
             return false;
@@ -19,10 +21,11 @@ public class AuctionController {
     }
 
     public void showAllAuctions() {
-        for (Auction a : auctionsList.getAuctionsList()) {
-            System.out.println(a);
-        }
+        auctionsList.showAllAuctions();
     }
+
+
+
 
 
     int licznik = 0;

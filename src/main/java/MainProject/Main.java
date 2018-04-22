@@ -20,6 +20,7 @@ public class Main {
         AuctionController auctionController = new AuctionController();
         RegistrationController registrationController = new RegistrationController();
         AuctionsList auctionsList = new AuctionsList();
+        long iD = 100;
         while (state != State.EXIT) {
             switch (state) {
                 case INIT:
@@ -84,16 +85,13 @@ public class Main {
                             System.out.println();
                             break;
                         case ("2"):
-                            System.out.println("PODAJ NUMER OFERTY");
-                            long ID = scanner.nextLong();
-                            scanner.nextLine();
                             System.out.println("PODAJ NAZWE");
                             String nazwa = scanner.nextLine();
                             System.out.println("PODAJ OPIS");
                             String opis = scanner.nextLine();
                             System.out.println("PODAJ CENE");
                             int cena = scanner.nextInt();
-                            auctionController.addAuction(new Auction(ID, nazwa, opis, cena));
+                            auctionController.addAuction(new Auction(nazwa, opis, cena));
                             scanner.nextLine();
                             break;
                         case ("3"):
