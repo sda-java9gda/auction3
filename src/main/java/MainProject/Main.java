@@ -2,7 +2,7 @@ package MainProject;
 
 import Auctions.AuctionsList;
 import Auctions.Product;
-import Controlers.LoginControler;
+import Controllers.LoginController;
 import UserInterface.UserDatabase;
 
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         UserDatabase userDatabase = UserDatabase.getInstance();
-        LoginControler loginControler = new LoginControler();
+        LoginController loginController = new LoginController();
         AuctionsList auctionsList = new AuctionsList();
         while (state != State.EXIT) {
             switch (state) {
@@ -63,7 +63,7 @@ public class Main {
                     String login2 = scanner.nextLine();
                     System.out.println("PODAJ HASLO");
                     String password2 = scanner.nextLine();
-                    if (loginControler.isRegistered(login2, password2)==true) {
+                    if (loginController.isRegistered(login2, password2)==true) {
                         System.out.println("ZALOGOWALES SIE " + login2);
                         state = State.LOGGED;
                         break;

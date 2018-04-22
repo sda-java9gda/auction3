@@ -1,10 +1,10 @@
-package Controlers;
+package Controllers;
 
 import UserInterface.UserDatabase;
 
 
 
-public class LoginControler {
+public class LoginController {
 
 
     public boolean isRegistered (String login, String password){
