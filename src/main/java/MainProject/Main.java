@@ -1,5 +1,6 @@
 package MainProject;
 
+import Controllers.AuctionController;
 import Dataworkspace.AuctionsList;
 import Dataworkspace.Auction;
 import Controllers.RegistrationController;
@@ -16,7 +17,7 @@ public class Main {
         State state = State.INIT;
         Scanner scanner = new Scanner(System.in);
 
-        UserDatabase userDatabase = UserDatabase.getInstance();
+        AuctionController auctionController = new AuctionController();
         RegistrationController registrationController = new RegistrationController();
         AuctionsList auctionsList = new AuctionsList();
         while (state != State.EXIT) {
@@ -74,12 +75,12 @@ public class Main {
                     System.out.println("PODAJ KOMENDE");
                     System.out.println("1 - WYSWIETL AUKCJE");
                     System.out.println("2 - DODAJ AUKCJE");
-                    System.out.println("3 - USUN AUKCJE");
+                    System.out.println("3 - LICYTUJ AUKCJE");
                     System.out.println("4 - WYJSCIE");
                     String answer2 = scanner.nextLine();
                     switch (answer2) {
                         case ("1"):
-                            auctionsList.showAllAuctions();
+                            auctionController.showAllAuctions();
                             System.out.println();
                             break;
                         case ("2"):
@@ -92,13 +93,16 @@ public class Main {
                             String opis = scanner.nextLine();
                             System.out.println("PODAJ CENE");
                             int cena = scanner.nextInt();
-                            auctionsList.addProduct(new Auction(ID, nazwa, opis, cena));
+                            auctionController.addAuction(new Auction(ID, nazwa, opis, cena));
                             scanner.nextLine();
                             break;
                         case ("3"):
-                            System.out.println("PODAJ INDEKS AUKCJI DO USUNIECIA");
-                            int index = scanner.nextInt();
-                            auctionsList.removeProduct(index);
+                            System.out.println("PODAJ INDEKS AUKCJI DO LICYTOWANIA");
+                            long index = scanner.nextInt();
+                            System.out.println("PODAJ NOWA CENE");
+                            int nowaCena = scanner.nextInt();
+                            auctionController.bidAuction(index,nowaCena);
+                            scanner.nextLine();
                             break;
                         case ("4"):
                             state = State.INIT;
