@@ -32,7 +32,7 @@ public class UserDatabase {
     public void addUser(String login, String password) throws IOException {
         usersList.put(login, new UserPersonalData(login, password));
 
-        FileWriter fileWriter = new FileWriter(fileName);
+        FileWriter fileWriter = new FileWriter(fileName, true);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
         bufferedWriter.write(String.valueOf(usersList.get(login)));
