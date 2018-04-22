@@ -19,6 +19,7 @@ public class UserDatabase {
     public UserDatabase() {
     }
 
+
     public static UserDatabase getInstance() {
         if (Instance == null){
             Instance = new UserDatabase();
@@ -37,9 +38,14 @@ public class UserDatabase {
         bufferedWriter.write(String.valueOf(usersList.get(login)));
         bufferedWriter.newLine();
         bufferedWriter.close();
+
     }
 
     public Map<String, UserPersonalData> getUsersList() {
         return usersList;
+    }
+
+    public UserDatabase(Map<String, UserPersonalData> usersList) {
+        this.usersList = usersList;
     }
 }
