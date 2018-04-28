@@ -29,7 +29,7 @@ public class TestUser {
 
     }
     @Test
-    public void userAddedCorrectlyTest() throws Exception{4
+    public void userAddedCorrectlyTest() throws Exception{
         String login = "a";
         String password = "b";
 //        jcjianjcoasn
