@@ -32,8 +32,6 @@ public class TestUser {
     public void userAddedCorrectlyTest() throws Exception{
         String login = "a";
         String password = "b";
-//        jcjianjcoasn
-
         userDatabase.addUser(login, password);
         assertTrue(userDatabase.getUsersList().get(login).equals(new UserPersonalData(login, password)));
     }
